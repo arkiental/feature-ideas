@@ -1,0 +1,4 @@
+interface:
+  display_name: "Illustrated Feature Ideas"
+  short_description: "Discover 5-10 features with detailed visual explanations"
+  default_prompt: "Use $feature-ideas to inspect this project and propose 7 new features, each with a detailed image illustration, priority, and actionable MVP plan."

@@ -1,0 +1,35 @@
+[
+  {
+    "readme": "examples/task-planner/README.md",
+    "id": "task-planner",
+    "images": [
+      "examples/task-planner/images/01-time-blocks.png",
+      "examples/task-planner/images/02-recurring-checklists.png",
+      "examples/task-planner/images/03-focus-session.png",
+      "examples/task-planner/images/04-dependency-alerts.png",
+      "examples/task-planner/images/05-weekly-review.png"
+    ]
+  },
+  {
+    "readme": "examples/webhook-api/README.md",
+    "id": "webhook-api",
+    "images": [
+      "examples/webhook-api/images/01-safe-replay.png",
+      "examples/webhook-api/images/02-signing-key-rotation.png",
+      "examples/webhook-api/images/03-adaptive-retries.png",
+      "examples/webhook-api/images/04-event-contracts.png",
+      "examples/webhook-api/images/05-tenant-budgets.png"
+    ]
+  },
+  {
+    "readme": "examples/csv-cli/README.md",
+    "id": "csv-cli",
+    "images": [
+      "examples/csv-cli/images/01-schema-validation.png",
+      "examples/csv-cli/images/02-transform-preview.png",
+      "examples/csv-cli/images/03-saved-recipes.png",
+      "examples/csv-cli/images/04-streaming-profile.png",
+      "examples/csv-cli/images/05-safe-quarantine.png"
+    ]
+  }
+]

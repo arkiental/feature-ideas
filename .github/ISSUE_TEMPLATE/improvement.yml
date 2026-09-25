@@ -1,0 +1,25 @@
+name: Suggest an improvement
+description: Propose a focused change to the skill, examples, or contributor experience.
+title: "[Idea]: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: What user problem would this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change and alternatives
+      description: Explain how it preserves the illustrated-feature workflow and what tradeoffs it introduces.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: How would we verify the improvement?
+      description: A concrete prompt, failure case, before/after example, or proposed acceptance test is useful.
+    validations:
+      required: true

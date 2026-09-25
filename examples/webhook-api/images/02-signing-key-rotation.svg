@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="880" viewBox="0 0 1400 880" role="img" aria-labelledby="title desc">
+<title id="title">Rotate signing secrets without a cutover outage</title>
+<desc id="desc">Concept • Verify a new secret while the previous secret remains valid during a bounded overlap. A rotation guide shows how to accept either valid signature over identical signed content. New secret is shown once. Logs expose only key IDs, never secrets or full signature headers. An unready receiver may fail after expiry; show the exact deadline and recovery instructions.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#2262C6"/></marker></defs>
+<rect width="1400" height="880" fill="#F7F5EF"/>
+<g font-family="Arial, Helvetica, sans-serif">
+<text x="56" y="55" font-size="16" font-weight="700" fill="#2262C6">RELAYBOX / ILLUSTRATED FEATURE IDEAS</text>
+<text x="56" y="109" font-size="37" font-weight="700" fill="#152A3A">Rotate signing secrets without a cutover outage</text>
+<text x="56" y="150" font-size="21" font-weight="400" fill="#152A3A">Concept • Verify a new secret while the previous secret remains valid during a bounded overlap.</text>
+<line x1="56" y1="179" x2="1344" y2="179" stroke="#B4BFCA"/>
+<rect x="56" y="212" width="400" height="279" fill="#FFFFFF" stroke="#B4BFCA"/>
+<text x="78" y="247" font-size="16" font-weight="700" fill="#2262C6">1 / TRIGGER</text>
+<text x="78" y="288" font-size="25" font-weight="700" fill="#152A3A">Create replacement key</text>
+<text x="78" y="335" font-size="20" font-weight="400" fill="#152A3A">POST /endpoints/ep_9/keys</text>
+<text x="78" y="372" font-size="20" font-weight="400" fill="#152A3A">Old key: key_4</text>
+<text x="78" y="409" font-size="20" font-weight="400" fill="#152A3A">New key: key_5</text>
+<text x="78" y="446" font-size="20" font-weight="400" fill="#152A3A">Overlap: 24 hours</text>
+<path d="M464 351 H491" fill="none" stroke="#2262C6" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="500" y="212" width="400" height="279" fill="#FFFFFF" stroke="#B4BFCA"/>
+<text x="522" y="247" font-size="16" font-weight="700" fill="#2262C6">2 / MECHANISM</text>
+<text x="522" y="288" font-size="25" font-weight="700" fill="#152A3A">Sign with both keys</text>
+<text x="522" y="335" font-size="20" font-weight="400" fill="#152A3A">Same timestamp + raw body</text>
+<text x="522" y="372" font-size="20" font-weight="400" fill="#152A3A">Signatures tagged with key IDs</text>
+<text x="522" y="409" font-size="20" font-weight="400" fill="#152A3A">Receiver installs key_5</text>
+<text x="522" y="446" font-size="20" font-weight="400" fill="#152A3A">Old key remains usable</text>
+<path d="M908 351 H935" fill="none" stroke="#2262C6" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="944" y="212" width="400" height="279" fill="#FFFFFF" stroke="#B4BFCA"/>
+<text x="966" y="247" font-size="16" font-weight="700" fill="#2262C6">3 / RESULT</text>
+<text x="966" y="288" font-size="25" font-weight="700" fill="#152A3A">Retire the old key</text>
+<text x="966" y="335" font-size="20" font-weight="400" fill="#152A3A">Receiver verifies key_5</text>
+<text x="966" y="372" font-size="20" font-weight="400" fill="#152A3A">Deadline expires</text>
+<text x="966" y="409" font-size="20" font-weight="400" fill="#152A3A">Sign only with key_5</text>
+<text x="966" y="446" font-size="20" font-weight="400" fill="#152A3A">Audit key_4 retirement</text>
+<text x="56" y="544" font-size="16" font-weight="700" fill="#2262C6">WHAT CHANGES</text>
+<text x="56" y="586" font-size="24" font-weight="700" fill="#152A3A">Before rotation</text>
+<text x="56" y="621" font-size="20" font-weight="400" fill="#152A3A">key_4 signature</text>
+<path d="M421 580 H481" fill="none" stroke="#2262C6" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="500" y="586" font-size="24" font-weight="700" fill="#152A3A">Overlap window</text>
+<text x="500" y="621" font-size="20" font-weight="400" fill="#152A3A">key_4 + key_5</text>
+<path d="M865 580 H925" fill="none" stroke="#2262C6" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="944" y="586" font-size="24" font-weight="700" fill="#152A3A">After deadline</text>
+<text x="944" y="621" font-size="20" font-weight="400" fill="#152A3A">key_5 signature</text>
+<line x1="56" y1="658" x2="1344" y2="658" stroke="#B4BFCA"/>
+<text x="56" y="703" font-size="18" font-weight="700" fill="#2262C6">01</text>
+<text x="98" y="703" font-size="19" font-weight="400" fill="#152A3A">A rotation guide shows how to accept either valid signature over identical signed content.</text>
+<text x="56" y="750" font-size="18" font-weight="700" fill="#2262C6">02</text>
+<text x="98" y="750" font-size="19" font-weight="400" fill="#152A3A">New secret is shown once. Logs expose only key IDs, never secrets or full signature headers.</text>
+<text x="56" y="797" font-size="18" font-weight="700" fill="#2262C6">03</text>
+<text x="98" y="797" font-size="19" font-weight="400" fill="#152A3A">An unready receiver may fail after expiry; show the exact deadline and recovery instructions.</text>
+<text x="56" y="850" font-size="15" font-weight="400" fill="#526675">Fictional project • Synthetic data • Proposed behavior, not a shipped feature or measured result</text>
+</g></svg>

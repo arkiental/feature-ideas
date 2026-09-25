@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="880" viewBox="0 0 1400 880" role="img" aria-labelledby="title desc">
+<title id="title">Catch event contract errors before dispatch</title>
+<desc id="desc">Concept • Validate a versioned event body at ingestion and return an actionable error path. Unconfigured event types preserve current ingestion behavior; strictness is opt-in per type. Schema versions are immutable, so old producers retain their explicit contract. Bound schema depth and validation time; reject remote references instead of fetching URLs.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#2262C6"/></marker></defs>
+<rect width="1400" height="880" fill="#F7F5EF"/>
+<g font-family="Arial, Helvetica, sans-serif">
+<text x="56" y="55" font-size="16" font-weight="700" fill="#2262C6">RELAYBOX / ILLUSTRATED FEATURE IDEAS</text>
+<text x="56" y="109" font-size="37" font-weight="700" fill="#152A3A">Catch event contract errors before dispatch</text>
+<text x="56" y="150" font-size="21" font-weight="400" fill="#152A3A">Concept • Validate a versioned event body at ingestion and return an actionable error path.</text>
+<line x1="56" y1="179" x2="1344" y2="179" stroke="#B4BFCA"/>
+<rect x="56" y="212" width="400" height="279" fill="#FFFFFF" stroke="#B4BFCA"/>
+<text x="78" y="247" font-size="16" font-weight="700" fill="#2262C6">1 / TRIGGER</text>
+<text x="78" y="288" font-size="25" font-weight="700" fill="#152A3A">Producer submits event</text>
+<text x="78" y="335" font-size="20" font-weight="400" fill="#152A3A">type: invoice.paid</text>
+<text x="78" y="372" font-size="20" font-weight="400" fill="#152A3A">schema_version: 2</text>
+<text x="78" y="409" font-size="20" font-weight="400" fill="#152A3A">data.amount_minor: &quot;4900&quot;</text>
+<text x="78" y="446" font-size="20" font-weight="400" fill="#152A3A">Contract expects integer</text>
+<path d="M464 351 H491" fill="none" stroke="#2262C6" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="500" y="212" width="400" height="279" fill="#FFFFFF" stroke="#B4BFCA"/>
+<text x="522" y="247" font-size="16" font-weight="700" fill="#2262C6">2 / MECHANISM</text>
+<text x="522" y="288" font-size="25" font-weight="700" fill="#152A3A">Validate before queueing</text>
+<text x="522" y="335" font-size="20" font-weight="400" fill="#152A3A">Resolve immutable schema v2</text>
+<text x="522" y="372" font-size="20" font-weight="400" fill="#152A3A">Validate supported keywords</text>
+<text x="522" y="409" font-size="20" font-weight="400" fill="#152A3A">Locate invalid value</text>
+<text x="522" y="446" font-size="20" font-weight="400" fill="#152A3A">Do not create a delivery</text>
+<path d="M908 351 H935" fill="none" stroke="#2262C6" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="944" y="212" width="400" height="279" fill="#FFFFFF" stroke="#B4BFCA"/>
+<text x="966" y="247" font-size="16" font-weight="700" fill="#2262C6">3 / RESULT</text>
+<text x="966" y="288" font-size="25" font-weight="700" fill="#152A3A">Producer corrects input</text>
+<text x="966" y="335" font-size="20" font-weight="400" fill="#152A3A">422 schema_validation_failed</text>
+<text x="966" y="372" font-size="20" font-weight="400" fill="#152A3A">path: /data/amount_minor</text>
+<text x="966" y="409" font-size="20" font-weight="400" fill="#152A3A">expected: integer</text>
+<text x="966" y="446" font-size="20" font-weight="400" fill="#152A3A">Resend 4900 → 202 Accepted</text>
+<text x="56" y="544" font-size="16" font-weight="700" fill="#2262C6">WHAT CHANGES</text>
+<text x="56" y="586" font-size="24" font-weight="700" fill="#152A3A">Invalid payload</text>
+<text x="56" y="621" font-size="20" font-weight="400" fill="#152A3A">&quot;4900&quot; · string</text>
+<path d="M421 580 H481" fill="none" stroke="#2262C6" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="500" y="586" font-size="24" font-weight="700" fill="#152A3A">Precise feedback</text>
+<text x="500" y="621" font-size="20" font-weight="400" fill="#152A3A">/data/amount_minor</text>
+<path d="M865 580 H925" fill="none" stroke="#2262C6" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="944" y="586" font-size="24" font-weight="700" fill="#152A3A">Corrected payload</text>
+<text x="944" y="621" font-size="20" font-weight="400" fill="#152A3A">4900 · integer</text>
+<line x1="56" y1="658" x2="1344" y2="658" stroke="#B4BFCA"/>
+<text x="56" y="703" font-size="18" font-weight="700" fill="#2262C6">01</text>
+<text x="98" y="703" font-size="19" font-weight="400" fill="#152A3A">Unconfigured event types preserve current ingestion behavior; strictness is opt-in per type.</text>
+<text x="56" y="750" font-size="18" font-weight="700" fill="#2262C6">02</text>
+<text x="98" y="750" font-size="19" font-weight="400" fill="#152A3A">Schema versions are immutable, so old producers retain their explicit contract.</text>
+<text x="56" y="797" font-size="18" font-weight="700" fill="#2262C6">03</text>
+<text x="98" y="797" font-size="19" font-weight="400" fill="#152A3A">Bound schema depth and validation time; reject remote references instead of fetching URLs.</text>
+<text x="56" y="850" font-size="15" font-weight="400" fill="#526675">Fictional project • Synthetic data • Proposed behavior, not a shipped feature or measured result</text>
+</g></svg>

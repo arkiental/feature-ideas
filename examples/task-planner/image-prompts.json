@@ -1,0 +1,37 @@
+{
+  "date": "2026-09-25",
+  "tool": "Built-in OpenAI image generation",
+  "shared_style": "Fictional Daymark task planner; landscape 1536x1024; Concept label; ivory background, navy text, cobalt interaction accent; legible labels and numbered trigger/action/result callouts.",
+  "images": [
+    {
+      "file": "01-time-blocks",
+      "title": "Plan tasks into open time",
+      "body": "A weekly task app called Daymark. Three-column annotation layout: left small source task list with \"Write launch notes · 45 min\", middle large calendar showing Tuesday 10:00–10:45 selected slot, right small completion panel \"Scheduled · Tue 10:00\". Show drag from unscheduled task into calendar with clear arrow. At bottom a conflict state \"This overlaps Design review. Choose another time.\" 3 numbered callouts: \"1 Pick an unscheduled task\", \"2 Drop into open time\", \"3 Confirm the time block\". No AI automation; user controls scheduling."
+    },
+    {
+      "file": "02-recurring-checklists",
+      "title": "Repeat the work, keep the checklist",
+      "body": "Daymark task app recurrence editor on left, next occurrence preview on right. Main task \"Weekly site check\"; checklist \"Check links\", \"Review uptime\", \"Publish summary\". Editor says \"Every Monday\", \"09:00\", \"Create next after completion\". Preview next task fresh unchecked checklist dated Monday. Arrow labeled \"Complete this occurrence\". Callouts \"1 Set a repeat rule\", \"2 Finish the current checklist\", \"3 Get a fresh checklist\". Small note \"Original completion stays in history\"."
+    },
+    {
+      "file": "03-focus-session",
+      "title": "One task, one focus session",
+      "body": "Daymark app focus view. One central task \"Write launch notes\". Large 25:00 timer, primary \"Start focus\", secondary \"Pause\" and \"End session\". Three-step strip below \"Choose task → Start timer → Review session\". Right narrow result panel \"Session complete\", \"25 minutes\", with checkbox \"Mark task complete\" initially unchecked. Callouts \"1 Start from any task\", \"2 Keep only the task in view\", \"3 Decide what is complete\". Explain through visual focus timer completion does not automatically complete the task. Reduced-motion-friendly static composition."
+    },
+    {
+      "file": "04-dependency-alerts",
+      "title": "See what is blocking the next task",
+      "body": "Daymark task app dependency detail. Task \"Publish release\" has visible status \"Blocked\"; linked prerequisite \"Approve release notes\" open. Main diagram left two task rows connected by labeled \"depends on\" arrow. Right after panel prerequisite completed and status now \"Ready to start\" for publish task, not auto-completed. Callouts \"1 Link a prerequisite\", \"2 See why work is blocked\", \"3 Start when it is ready\". Small validation example \"This link would create a cycle\" near rejected reverse arrow."
+    },
+    {
+      "file": "05-weekly-review",
+      "title": "Close the week with clear next steps",
+      "body": "Daymark task app weekly review. Two large panels left \"This week\" completed tasks with real sample names \"Write release notes\", \"Fix menu labels\"; middle \"Still open\" tasks \"Check help links\" and \"Draft onboarding\"; right next-step controls per unfinished task: \"Move to next week\", \"Keep date\", \"Archive\". Selected move action preview \"Check help links → Monday\". Callouts \"1 Review completed work\", \"2 Decide on unfinished tasks\", \"3 Apply changes with Undo\". Small footer confirmation \"1 task moved · Undo\". Avoid fake metrics or motivational slogans."
+    }
+  ],
+  "edits": {
+    "01-time-blocks": "Leave task checkbox empty after scheduling. Label conflict as alternative example. Remove promotional subtitle.",
+    "03-focus-session": "Remove promotional copy. Show Pause and End session disabled before Start.",
+    "04-dependency-alerts": "Use unblocks for approval-to-publish arrows. Remove promotional subtitle."
+  }
+}

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="880" viewBox="0 0 1400 880" role="img" aria-labelledby="title desc">
+<title id="title">Respect endpoint backpressure</title>
+<desc id="desc">Concept • Replace synchronized fixed retries with bounded, endpoint-aware scheduling. Retryable statuses are explicit; ordinary 4xx failures stop automatically by default. Missing or malformed Retry-After → documented exponential backoff with bounded jitter. A delay beyond the delivery deadline ends in a clear terminal state instead of an early retry.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#2262C6"/></marker></defs>
+<rect width="1400" height="880" fill="#F7F5EF"/>
+<g font-family="Arial, Helvetica, sans-serif">
+<text x="56" y="55" font-size="16" font-weight="700" fill="#2262C6">RELAYBOX / ILLUSTRATED FEATURE IDEAS</text>
+<text x="56" y="109" font-size="37" font-weight="700" fill="#152A3A">Respect endpoint backpressure</text>
+<text x="56" y="150" font-size="21" font-weight="400" fill="#152A3A">Concept • Replace synchronized fixed retries with bounded, endpoint-aware scheduling.</text>
+<line x1="56" y1="179" x2="1344" y2="179" stroke="#B4BFCA"/>
+<rect x="56" y="212" width="400" height="279" fill="#FFFFFF" stroke="#B4BFCA"/>
+<text x="78" y="247" font-size="16" font-weight="700" fill="#2262C6">1 / TRIGGER</text>
+<text x="78" y="288" font-size="25" font-weight="700" fill="#152A3A">Receiver asks for time</text>
+<text x="78" y="335" font-size="20" font-weight="400" fill="#152A3A">evt_105 → ep_orders</text>
+<text x="78" y="372" font-size="20" font-weight="400" fill="#152A3A">HTTP 429 Too Many Requests</text>
+<text x="78" y="409" font-size="20" font-weight="400" fill="#152A3A">Retry-After: 120</text>
+<text x="78" y="446" font-size="20" font-weight="400" fill="#152A3A">Policy: max 6 attempts</text>
+<path d="M464 351 H491" fill="none" stroke="#2262C6" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="500" y="212" width="400" height="279" fill="#FFFFFF" stroke="#B4BFCA"/>
+<text x="522" y="247" font-size="16" font-weight="700" fill="#2262C6">2 / MECHANISM</text>
+<text x="522" y="288" font-size="25" font-weight="700" fill="#152A3A">Schedule a safe retry</text>
+<text x="522" y="335" font-size="20" font-weight="400" fill="#152A3A">Parse delay or HTTP date</text>
+<text x="522" y="372" font-size="20" font-weight="400" fill="#152A3A">Apply policy caps + jitter</text>
+<text x="522" y="409" font-size="20" font-weight="400" fill="#152A3A">Persist next_attempt_at</text>
+<text x="522" y="446" font-size="20" font-weight="400" fill="#152A3A">Release the worker slot</text>
+<path d="M908 351 H935" fill="none" stroke="#2262C6" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="944" y="212" width="400" height="279" fill="#FFFFFF" stroke="#B4BFCA"/>
+<text x="966" y="247" font-size="16" font-weight="700" fill="#2262C6">3 / RESULT</text>
+<text x="966" y="288" font-size="25" font-weight="700" fill="#152A3A">Recover transparently</text>
+<text x="966" y="335" font-size="20" font-weight="400" fill="#152A3A">Retry no earlier than 120s</text>
+<text x="966" y="372" font-size="20" font-weight="400" fill="#152A3A">Attempt 2 returns 204</text>
+<text x="966" y="409" font-size="20" font-weight="400" fill="#152A3A">Status: delivered</text>
+<text x="966" y="446" font-size="20" font-weight="400" fill="#152A3A">Attempts remain inspectable</text>
+<text x="56" y="544" font-size="16" font-weight="700" fill="#2262C6">WHAT CHANGES</text>
+<text x="56" y="586" font-size="24" font-weight="700" fill="#152A3A">Attempt 1</text>
+<text x="56" y="621" font-size="20" font-weight="400" fill="#152A3A">429 · wait requested</text>
+<path d="M421 580 H481" fill="none" stroke="#2262C6" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="500" y="586" font-size="24" font-weight="700" fill="#152A3A">Durable schedule</text>
+<text x="500" y="621" font-size="20" font-weight="400" fill="#152A3A">120s + bounded jitter</text>
+<path d="M865 580 H925" fill="none" stroke="#2262C6" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="944" y="586" font-size="24" font-weight="700" fill="#152A3A">Attempt 2</text>
+<text x="944" y="621" font-size="20" font-weight="400" fill="#152A3A">204 · delivered</text>
+<line x1="56" y1="658" x2="1344" y2="658" stroke="#B4BFCA"/>
+<text x="56" y="703" font-size="18" font-weight="700" fill="#2262C6">01</text>
+<text x="98" y="703" font-size="19" font-weight="400" fill="#152A3A">Retryable statuses are explicit; ordinary 4xx failures stop automatically by default.</text>
+<text x="56" y="750" font-size="18" font-weight="700" fill="#2262C6">02</text>
+<text x="98" y="750" font-size="19" font-weight="400" fill="#152A3A">Missing or malformed Retry-After → documented exponential backoff with bounded jitter.</text>
+<text x="56" y="797" font-size="18" font-weight="700" fill="#2262C6">03</text>
+<text x="98" y="797" font-size="19" font-weight="400" fill="#152A3A">A delay beyond the delivery deadline ends in a clear terminal state instead of an early retry.</text>
+<text x="56" y="850" font-size="15" font-weight="400" fill="#526675">Fictional project • Synthetic data • Proposed behavior, not a shipped feature or measured result</text>
+</g></svg>
